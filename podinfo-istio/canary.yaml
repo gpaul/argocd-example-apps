@@ -21,7 +21,7 @@ spec:
     port: 9898
   canaryAnalysis:
     # schedule interval (default 60s)
-    interval: 30s
+    interval: 1m
     # max number of failed metric checks before rollback
     threshold: 5
     # max traffic percentage routed to canary
@@ -35,7 +35,7 @@ spec:
       # minimum req success rate (non 5xx responses)
       # percentage (0-100)
       threshold: 99
-      interval: 30s
+      interval: 60s
     - name: request-duration
       # maximum req duration P99
       # milliseconds
