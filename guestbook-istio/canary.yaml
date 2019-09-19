@@ -40,3 +40,9 @@ spec:
       # milliseconds
       threshold: 500
       interval: 5s
+    webhooks:
+    - name: load-test
+      url: http://flagger-loadtester.test/
+      timeout: 5s
+      metadata:
+        cmd: "hey -z 1m -q 10 -c 2 http://guestbook-ui-canary.test:80/"
